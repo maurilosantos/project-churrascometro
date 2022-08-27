@@ -1,0 +1,29 @@
+body{
+background-color: rgb(46, 43, 248);
+}
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 300px;
+    margin: auto;
+    background-color: yellow;
+    padding: 20px;
+    border-radius: 10px; 
+}
+h1{
+    text-align: center;
+    
+}
+button{
+    border-radius: 5px;
+    background-color: rgb(4, 226, 4);
+    padding: 5px;
+    cursor: pointer;
+}
+input{
+    width: 100%;
+    display: block;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+
+}

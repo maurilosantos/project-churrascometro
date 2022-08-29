@@ -1,10 +1,4 @@
-// SEMPRE QUE FOR CRIAR ALGUM PROGRAMA, SAIBA AS REGRAS:
-// Carne -   400 gr por Homem                  + de 6 horas -> 650 gr por homem
-// Carne -   300 gr por Mulher                 + de 6 horas -> 550gr por mulher
-// Cerveja - 1200 ml por Adulto               + de 6 horas -> 2000 ml por Adulto
-// Refrigerante/água  -  1000 ml por pessoa   + de 6 horas -> 1500ml por pessoa
-// Acompanhamentos: 200 gr                    + de 6 horas --> 450 gr
-// crianças valem por 0,5
+
 
 let inputHomens = document.getElementById("homens");
 let inputMulheres = document.getElementById("mulheres");

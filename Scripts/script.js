@@ -1,10 +1,13 @@
 // SEMPRE QUE FOR CRIAR ALGUM PROGRAMA, SAIBA AS REGRAS:
-// Carne -   400 gr por pessoa                  + de 6 horas -> 650 gr por pessoa
-// Cerveja - 1200 ml por Pessoa               + de 6 horas -> 2000 ml por pessoa
+// Carne -   400 gr por Homem                  + de 6 horas -> 650 gr por homem
+// Carne -   300 gr por Mulher                 + de 6 horas -> 550gr por mulher
+// Cerveja - 1200 ml por Adulto               + de 6 horas -> 2000 ml por Adulto
 // Refrigerante/água  -  1000 ml por pessoa   + de 6 horas -> 1500ml por pessoa
+// Acompanhamentos: 200 gr                    + de 6 horas --> 450 gr
 // crianças valem por 0,5
 
-let inputAdultos = document.getElementById("adultos");
+let inputHomens = document.getElementById("homens");
+let inputMulheres = document.getElementById("mulheres");
 let inputCriancas = document.getElementById("criancas");
 let inputDuracao = document.getElementById("duracao");
 
@@ -12,25 +15,35 @@ let resultado = document.getElementById("resultado");
 
 function calcular(){
     console.log("Calculando...");
-    let adultos = inputAdultos.value;
+    let homens = inputHomens.value;
+    let mulheres = inputMulheres.value;
     let criancas = inputCriancas.value;
     let duracao = inputDuracao.value;
 
-    let qtdTotalCarne = carnePP(duracao) * adultos + (carnePP(duracao)/2 * criancas);
-    let qtdTotalCerveja = cervejaPP(duracao) * adultos;
-    let qtdTotalBebidas = bebidasPP(duracao) * adultos + (bebidasPP(duracao)/2 * criancas)
-    console.log(qtdTotalCarne)
+    let qtdTotalCarne = carnePH(duracao) * homens + carnePM(duracao) * mulheres + (carnePH(duracao)/2 * criancas);
+    let qtdTotalCerveja = cervejaPP(duracao) * (homens + mulheres);
+    let qtdTotalBebidas = bebidasPP(duracao) * (homens + mulheres) + (bebidasPP(duracao)/2 * criancas);
+    let qtdTotalAcompanhamento = AcompanhamPP(duracao) * (homens + mulheres) + (AcompanhamPP(duracao)/2 * criancas);
 
-    resultado.innerHTML = `<p>${qtdTotalCarne/1000} Kg de Carne</p>`
-    resultado.innerHTML += `<p>${Math.ceil(qtdTotalCerveja/350)} Latas de Cervejas</p>`
-    resultado.innerHTML += `<p>${Math.ceil(qtdTotalBebidas/2000)} Garrafas (2L) de Bebidas</p>`
-
-function carnePP(duracao){
+    resultado.innerHTML = `<p><img src="./assets/meat.png" width="35px"> ${qtdTotalCarne/1000} Kg de Carne</p>`
+    resultado.innerHTML += `<p><img src="./assets/cheers.png" width="35px"> ${Math.ceil(qtdTotalCerveja/350)} Latas de Cerveja (350ml)</p>`
+    resultado.innerHTML += `<p><img src="./assets/soda.png" width="35px"> ${Math.ceil(qtdTotalBebidas/2000)} Garrafas (2L) de bebida não-alcoólica</p>`
+    resultado.innerHTML += `<p><img src="./assets/espeto.png" width="35px"> ${qtdTotalAcompanhamento/1000} Kg de Acompanhamentos</p>`
+function carnePH(duracao){
     
     if (duracao >= 6){
         return 650;
     } else {
         return 400;
+    }
+    }
+    
+    function carnePM(duracao){
+
+     if (duracao >= 6){
+            return 550;
+    } else{
+        return 300;
     }
     }
     
@@ -51,4 +64,11 @@ function carnePP(duracao){
                 return 1000;
             }
             }
+        function AcompanhamPP(duracao){
+            if (duracao >= 6){
+                return 450;
+            } else {
+                return 200;
+            }
+        }
   }

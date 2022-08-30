@@ -1,5 +1,5 @@
 # Churrascômetro
-<img src="https://img.shields.io/badge/status-desenvolvendo-red"><br>
+<img src="https://img.shields.io/badge/status-desenvolvido-green"><br>
 ## Índice
 <!--ts-->
 * [Descrição do Projeto](#descrição-do-projeto-)

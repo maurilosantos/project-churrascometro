@@ -1,4 +1,5 @@
 # Churrascômetro
+<img src="https://img.shields.io/badge/status-desenvolvendo-red"><br>
 ## Índice
 <!--ts-->
 * [Descrição do Projeto](#descrição-do-projeto-)
@@ -10,9 +11,8 @@
 
 
 # Descrição do projeto <br>
-Este desafio foi idealizado pelo ProgramadorBr no curso de desenvolvimento web full stack, no módulo javascript intermediário. Nele é possível calcular a quantidade de comidas e bebidas com base nas pessoas (Homens, Mulheres e Crianças).<br><br>
+Este desafio foi idealizado pelo ProgramadorBr no curso de desenvolvimento web full stack, no módulo javascript intermediário. Nele é possível calcular a quantidade de comidas e bebidas com base no número de pessoas (Homens, Mulheres e Crianças).<br><br>
 
-<img src="https://img.shields.io/badge/status-completo-green"><br>
 
 # Função <br>
 Antes de começar o programa, as regras do algoritimo foram:<br>

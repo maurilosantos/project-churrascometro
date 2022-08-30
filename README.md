@@ -16,7 +16,7 @@ Este desafio foi idealizado pelo ProgramadorBr no curso de desenvolvimento web f
 
 # Função <br>
 Antes de começar o programa, as regras do algoritimo foram:<br>
-🥩 Carne - 400 gr por Adulto. Se + de 6 horas ➡ 650 gr por homem.<br>
+🥩 Carne - 400 gr por Adulto. Se + de 6 horas ➡ 650 gr por adulto.<br>
 🍻 Cerveja - 1200 ml(4 latinhas) por Adulto. Se + de 6 horas ➡ 2000 ml(6 latinhas) por Adulto.<br>
 🥤 Bebidas(Refrigerante/água)  -  1L por pessoa. Se + de 6 horas ➡ 1,5L por pessoa.<br>
 👶 Crianças valem por 0,5 (metade) dos adultos. 👈<br>

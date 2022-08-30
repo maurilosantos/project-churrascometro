@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./CSS/style.css">
-    <link rel="icon" href="./assets/icon.PNG" type="image/png">
-
-    <title>Churrascômetro</title>
-
+    <title>Calcular Churrasco</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="shortcut icon" href="./assets/icon.PNG" type="image/x-icon">
 </head>
-<body>
-    <div class="container">
-        <h1>Churrascômetro</h1>
-        <input id="homens" name="homens" type="number" placeholder="Homens">
-        <input id="mulheres" name="mulheres" type="number" placeholder="Mulheres">
-        <input id="criancas" name="criancas" type="number" placeholder="Crianças">
-        <input id="duracao" name="duracao" type="number" placeholder="Duração">
-        <button onclick="calcular()">Calcular</button>
-        <div id="resultado">
 
+<body>
+
+    <div id="container">
+        <h2>Churrascômetro</h2>
+        <div id="input">
+            <img id="logo" src="./assets/churrasqueira.png">
+            <input type="number" id="inputAdultos" placeholder="Adultos">
+            <input type="number" id="inputCriancas" placeholder="Crianças">
+            <input type="number" id="inputDuracao" placeholder="Duração (h)">
+        </div>
+
+        <button onclick="calcular()" id="button" type="submit">Calcule</button>
+
+        <div id="resultado">
+            <p id="pessoas">
+          <img src="./assets/ico8.png">
+            </p>
+            <div class="exibicao">
+                <img class="imgExibicao" src="./assets/meat.png" alt="">
+                <p id="carne"> </p>
+                <img class="imgExibicao" src="./assets/cheers.png" alt="">
+                <p id="cerveja"></p>           
+                <img class="imgExibicao" src="./assets/soda.png" alt="">
+                <p id="bebidas"></p>
+            </div>
         </div>
     </div>
     <script src="./Scripts/script.js"></script>
